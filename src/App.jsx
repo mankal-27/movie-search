@@ -40,7 +40,6 @@ const App = () => {
                 throw new Error('Failed to metch movies')
             }
             const data = await response.json();
-            console.log(data)
             if(data.Response === 'False'){
                 setErrorMessage(data.Error || 'Error Fetching movies');
                 setMovieList([])
